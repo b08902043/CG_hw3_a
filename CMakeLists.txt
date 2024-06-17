@@ -7,5 +7,13 @@ set ( CMAKE_CXX_STANDARD          11 )
 set ( CMAKE_CXX_STANDARD_REQUIRED ON )
 set ( CMAKE_CXX_EXTENSIONS        OFF )
 
+# Source
+
+set ( SOURCE
+	./src/vec3.h
+	./src/main.cpp
+	./src/color.h
+)
+
 #Executables
-add_executable(main ./main.cpp)
+add_executable(main ${SOURCE})
