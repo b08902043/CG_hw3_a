@@ -1,4 +1,6 @@
 #include <iostream>
+#include "vec3.h"
+#include "color.h"
 
 int main() {
 
@@ -13,7 +15,9 @@ int main() {
 
     for (int j = 0; j < image_height; j++) {
         for (int i = 0; i < image_width; i++) {
-            //auto r = double(i) / (image_width-1);
+	    auto c = color(double(255), double(255), double(255));
+            pixel_color(std::cout, c);
+			//auto r = double(i) / (image_width-1);
             //auto g = double(j) / (image_height-1);
             //auto b = 0.0;
 

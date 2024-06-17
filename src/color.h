@@ -14,3 +14,4 @@ void pixel_color(std::ostream& out, const color& pixel_color) {
 
     out << r << ' ' << g << ' ' << b << ' ' << '\n';
 }
+#endif
