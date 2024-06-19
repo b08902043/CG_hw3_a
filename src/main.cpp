@@ -45,9 +45,10 @@ int main() {
 			//auto pixel_center = vec3(i, j, 60);
 			vec3 pixel_color(255, 0, 0);
 			auto pixel_center = pixel00_loc.plus_vec((pixel_delta_u.mul_vec(double(i))).plus_vec((pixel_delta_v.mul_vec(j))));
+			//std::cout << pixel_center.a[0] << " " << pixel_center.a[1] << " " << pixel_center.a[2] << endl;
 			auto ray_direction = pixel_center.minus_vec(camera_center);
 			ray r(camera_center, ray_direction);
-			if(hit_sphere(vec3(viewport_height/2, viewport_width/2, -1), 0.5, r)) {
+			if(hit_sphere(vec3(0, 0, -1), 0.5, r)) {
 				std::cout << pixel_color.a[0] << ' ' << pixel_color.a[1] << ' ' << pixel_color.a[2] << '\n';
 				//pixel_color();
 			}
