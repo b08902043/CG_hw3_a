@@ -12,6 +12,7 @@ set ( CMAKE_CXX_EXTENSIONS        OFF )
 set ( SOURCE
 	./src/vec3.h
 	./src/ray.h
+	./src/sphere.h
 	./src/main.cpp
 )
 

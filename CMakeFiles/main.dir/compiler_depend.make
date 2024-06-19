@@ -188,7 +188,7 @@ CMakeFiles/main.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
-  src/vec3.h \
+  /usr/include/c++/11/math.h \
   /usr/include/c++/11/cmath \
   /usr/include/math.h \
   /usr/include/x86_64-linux-gnu/bits/math-vector.h \
@@ -200,7 +200,9 @@ CMakeFiles/main.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  src/ray.h
+  src/vec3.h \
+  src/ray.h \
+  src/sphere.h
 
 
 /usr/include/x86_64-linux-gnu/bits/iscanonical.h:
@@ -285,6 +287,8 @@ CMakeFiles/main.dir/src/main.cpp.o: src/main.cpp \
 
 /usr/include/c++/11/cerrno:
 
+src/sphere.h:
+
 /usr/include/c++/11/cstdio:
 
 /usr/include/c++/11/bits/std_abs.h:
@@ -300,6 +304,8 @@ CMakeFiles/main.dir/src/main.cpp.o: src/main.cpp \
 /usr/include/endian.h:
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
+
+/usr/include/c++/11/math.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
