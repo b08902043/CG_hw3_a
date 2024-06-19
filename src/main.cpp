@@ -230,9 +230,9 @@ int main(int argc, char *argv[]) {
                                 	auto ray_direction = pixel_center.minus_vec(camera_center);
 					ray r(camera_center, ray_direction);
 					if(hit_sphere(spheres[k].pos, spheres[k].radius, r) ){
-						pixel_color.a[0] = spheres[k].color.a[0]* 255.0;
-						pixel_color.a[1] = spheres[k].color.a[1]* 255.0;
-						pixel_color.a[2] = spheres[k].color.a[2]* 255.0;
+						pixel_color.a[0] = int(spheres[k].color.a[0]* 255.0);
+						pixel_color.a[1] = int(spheres[k].color.a[1]* 255.0);
+						pixel_color.a[2] = int(spheres[k].color.a[2]* 255.0);
 						
 					}	
 					std::cout << pixel_color.a[0] << ' ' << pixel_color.a[1] << ' ' << pixel_color.a[2] << '\n';
