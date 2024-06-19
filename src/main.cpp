@@ -32,7 +32,7 @@ int main() {
 	auto pixel_delta_u = viewport_u.div_vec(double(image_width));
 	auto pixel_delta_v = viewport_v.div_vec(double(image_height));
 
-	auto viewport_upper_left = camera_center.minus_vec(vec3(0, 0, focal_length).minus_vec(viewport_u.div_vec(2.0).plus_vec(viewport_v.div_vec(2.0))));
+	auto viewport_upper_left = camera_center.minus_vec(vec3(0, 0, focal_length).plus_vec(viewport_u.div_vec(2.0).plus_vec(viewport_v.div_vec(2.0))));
 	auto pixel00_loc = viewport_upper_left.plus_vec((pixel_delta_u.plus_vec(pixel_delta_v).mul_vec(0.5)));
 
 	std::cout << "P3\n" << image_width << ' ' << image_height << "\n255\n";

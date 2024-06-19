@@ -23,9 +23,9 @@ public:
 
  	vec3 div_vec(double t) {
                 vec3 new_vec;
-                new_vec.a[0] = this->a[0] /= t;
-                new_vec.a[1] = this->a[1] /= t;
-                new_vec.a[2] = this->a[2] /= t;
+                new_vec.a[0] = this->a[0] / t;
+                new_vec.a[1] = this->a[1] / t;
+                new_vec.a[2] = this->a[2] / t;
                 return new_vec;
         }
 
