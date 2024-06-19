@@ -1,3 +1,0 @@
-/home/hsuantingc00/CG_hw3_a/build/CMakeFiles/main.dir
-/home/hsuantingc00/CG_hw3_a/build/CMakeFiles/edit_cache.dir
-/home/hsuantingc00/CG_hw3_a/build/CMakeFiles/rebuild_cache.dir

@@ -4,18 +4,56 @@
 #include <cmath>
 #include <iostream>
 
-using std::sqrt;
-
 class vec3 {
-  public:
+public:
 	double a[3];
-	
-	//init vector
-	vec3() : a{0, 0, 0} {}
-	vec3(double a0, double a1, double a2) : a{a0, a1, a2} {}
+	vec3() : a{0,0,0} {}
+	vec3(double e0, double e1, double e2) : a{e0, e1, e2} {}
 
-	double r() const {return a[0];}
-	double g() const {return a[1];}
-	double b() const {return a[2];}
+	void print_vec() {
+		std::cout << '(' << this->a[0] << ',' << this->a[1] << ',' << this->a[2] << ')' << std::endl;
+	}
+	double dot_vec(vec3 v) {
+                double val = 0;
+                val += v.a[0] * this->a[0];
+                val += v.a[1] * this->a[1];
+                val += v.a[2] * this->a[2];
+                return val;
+        }
+
+ 	vec3 div_vec(double t) {
+                vec3 new_vec;
+                new_vec.a[0] = this->a[0] /= t;
+                new_vec.a[1] = this->a[1] /= t;
+                new_vec.a[2] = this->a[2] /= t;
+                return new_vec;
+        }
+
+
+	vec3 mul_vec(double t) {
+		vec3 new_vec;
+		new_vec.a[0] = t * this->a[0];
+ 		new_vec.a[1] = t * this->a[1]; 
+		new_vec.a[2] = t * this->a[2];
+		return new_vec;
+	}	
+	vec3 plus_vec(vec3 v) {
+		vec3 new_vec;
+		new_vec.a[0] = v.a[0] + this->a[0];	
+		new_vec.a[1] = v.a[1] + this->a[1];
+		new_vec.a[2] = v.a[2] + this->a[2];
+		return new_vec;
+	}
+	vec3 minus_vec(vec3 v) {
+                vec3 new_vec;
+                new_vec.a[0] = this->a[0] - v.a[0];
+                new_vec.a[1] = this->a[1] - v.a[1];
+                new_vec.a[2] = this->a[2] - v.a[2];
+                return new_vec;
+        }
+
+
 };
+
+
 #endif

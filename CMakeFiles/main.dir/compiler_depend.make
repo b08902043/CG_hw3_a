@@ -190,7 +190,7 @@ CMakeFiles/main.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  src/color.h
+  src/ray.h
 
 
 /usr/include/x86_64-linux-gnu/bits/iscanonical.h:
@@ -283,8 +283,6 @@ CMakeFiles/main.dir/src/main.cpp.o: src/main.cpp \
 
 /usr/include/c++/11/clocale:
 
-src/color.h:
-
 /usr/include/c++/11/bits/stl_iterator_base_funcs.h:
 
 /usr/include/ctype.h:
@@ -298,6 +296,8 @@ src/color.h:
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
 /usr/include/c++/11/bits/functexcept.h:
+
+src/ray.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
 
