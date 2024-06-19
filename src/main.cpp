@@ -204,9 +204,6 @@ int main(int argc, char *argv[]) {
 
 	std::cout << "P3\n" << image_width << ' ' << image_height << "\n255\n";
 
-	for(int i = 0;i < spheres.size();i ++) {
-		std::cout << spheres[i].radius << "\n";
-	}	
 	for (int j = 0;j < image_height; j++) {
 		for(int i = 0;i < image_width;i ++) {
 			if(std::string(argv[1]) == "task1") {
@@ -233,7 +230,10 @@ int main(int argc, char *argv[]) {
                                 	auto ray_direction = pixel_center.minus_vec(camera_center);
 					ray r(camera_center, ray_direction);
 					if(hit_sphere(spheres[k].pos, spheres[k].radius, r) ){
-						pixel_color = spheres[i].color;
+						pixel_color.a[0] = spheres[k].color.a[0]* 255.0;
+						pixel_color.a[1] = spheres[k].color.a[1]* 255.0;
+						pixel_color.a[2] = spheres[k].color.a[2]* 255.0;
+						
 					}	
 					std::cout << pixel_color.a[0] << ' ' << pixel_color.a[1] << ' ' << pixel_color.a[2] << '\n';
 			       	}	
