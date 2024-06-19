@@ -51,6 +51,9 @@ int main() {
 				std::cout << pixel_color.a[0] << ' ' << pixel_color.a[1] << ' ' << pixel_color.a[2] << std::endl;
 				//pixel_color();
 			}
+			else {
+				std::cout << 255 << ' ' << 255 << ' ' << std::endl;
+			}
 		}
 	}	
 
