@@ -48,11 +48,11 @@ int main() {
 			auto ray_direction = pixel_center.minus_vec(camera_center);
 			ray r(camera_center, ray_direction);
 			if(hit_sphere(vec3(0, 0, -1), 0.5, r)) {
-				std::cout << pixel_color.a[0] << ' ' << pixel_color.a[1] << ' ' << pixel_color.a[2] << std::endl;
+				std::cout << pixel_color.a[0] << ' ' << pixel_color.a[1] << ' ' << pixel_color.a[2] << '\n';
 				//pixel_color();
 			}
 			else {
-				std::cout << 255 << ' ' << 255 << ' ' << std::endl;
+				std::cout << 255 << ' ' << 255 << ' ' << '\n';
 			}
 		}
 	}	
