@@ -174,6 +174,7 @@ int main(int argc, char *argv[]) {
  				string color_str  = getData(strings[i], color_tag);
 				if(color_str != "") {
                                         vector<double> sphere_color = process_string(color_str);
+					//std::cout << sphere_color[0] << endl;
                                         curr_sphere.color.a[0] = sphere_color[0];
                                         curr_sphere.color.a[1] = sphere_color[1];
                                         curr_sphere.color.a[2] = sphere_color[2];
