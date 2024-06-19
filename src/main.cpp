@@ -230,8 +230,8 @@ int main(int argc, char *argv[]) {
                                 	auto ray_direction = pixel_center.minus_vec(camera_center);
 					ray r(camera_center, ray_direction);
 					//if(hit_sphere(spheres[k].pos, spheres[k].radius, r) ){
-					if(hit_sphere(vec3(0, 0, -1), 0.5, r){	
-					pixel_color.a[0] = int(spheres[k].color.a[0]* 255.0);
+					if(hit_sphere(vec3(0, 0, -1), 0.5, r)){	
+						pixel_color.a[0] = int(spheres[k].color.a[0]* 255.0);
 						pixel_color.a[1] = int(spheres[k].color.a[1]* 255.0);
 						pixel_color.a[2] = int(spheres[k].color.a[2]* 255.0);
 						
