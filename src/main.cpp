@@ -86,9 +86,44 @@ vector<double> process_string(string &text) {
 
 }
 int main(int argc, char *argv[]) {
-	//int image_width = 256;
-	//int image_height = 256;
 	
+	
+	//data processing
+	bool camera = false;
+	
+	string filename = "";
+        if(std::string(argv[1]) == "task3") {
+                filename = "./src/scenes/example1.xml";
+        }
+        vec3 background_color;
+        if(filename != "") {
+                string text = getFile( filename);
+                string background_tag ="background_color";
+                string camera_tag = "camera";
+		vector<string> strings = split_string(text);
+                for(int i = 0;i < strings.size();i ++) {
+                        string background_color_str  = getData(strings[i], background_tag);
+                        if(background_color_str != "") {
+                                vector<double> colors = process_string(background_color_str);
+                                background_color.a[0] = colors[0];
+                                background_color.a[1] = colors[1];
+                                background_color.a[2] = colors[2];
+
+                        }
+			if(getData(strings[i], camera_tag) != "") {
+				camera = true;
+				std::cout << i << "\n";
+			}
+			if(getData(strings[i], "/"+camera_tag) != "") {
+                                camera = false;
+                                std::cout << i << "\n";
+                        }
+
+
+                }
+
+        }
+
 	double ratio = 16.0/9.0;
 	int image_width = 500;
 
@@ -110,30 +145,6 @@ int main(int argc, char *argv[]) {
 
 	std::cout << "P3\n" << image_width << ' ' << image_height << "\n255\n";
 	
-	string filename = "";
-	if(std::string(argv[1]) == "task3") {
-		filename = "./src/scenes/example1.xml";
-	}
-	vec3 background_color;
-	if(filename != "") {
-		string text = getFile( filename);
-		string background_tag ="background_color";
-		vector<string> strings = split_string(text);
-		for(int i = 0;i < strings.size();i ++) {
-			string background_color_str  = getData(strings[i], background_tag);
-			if(background_color_str != "") {
-				vector<double> colors = process_string(background_color_str);
-				background_color.a[0] = colors[0];
-				background_color.a[1] = colors[1];
-				background_color.a[2] = colors[2];
-						
-			}
-		}
-		//for (string &s :all) {
-		//	std::cout << s << std::endl;
-	//	}
-
-	}
 	for (int j = 0;j < image_height; j++) {
 		for(int i = 0;i < image_width;i ++) {
 			if(std::string(argv[1]) == "task1") {
